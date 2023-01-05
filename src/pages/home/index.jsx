@@ -1,5 +1,5 @@
-import SendButton from '../../components/send-button/';
+import Button from '../../components/button/';
 
 export default function Home() {
-  return <SendButton></SendButton>;
+  return <Button>SEND</Button>;
 }
