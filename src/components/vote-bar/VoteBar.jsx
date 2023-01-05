@@ -4,37 +4,31 @@ import MinusIcon from '../../assets/images/icon-minus.svg';
 import PlusIcon from '../../assets/images/icon-plus.svg';
 import * as S from './style';
 
-export default function VoteBar() {
-  const [inputState, setInputState] = useState(0);
+export default function VoteBar({ type, onChange }) {
+  const [upVotes, setUpVotes] = useState(0);
 
   function handleButtonPlusClick() {
-    setInputState(inputState + 1);
+    setUpVotes(upVotes + 1);
   }
 
   function handleButtonMinusClick() {
-    setInputState(inputState - 1);
+    setUpVotes(upVotes - 1);
   }
 
   function handleChangeInput(value) {
-    setInputState(Number(value));
+    setUpVotes(Number(value));
+    onChange();
   }
 
   return (
     <>
-      <S.VoteBox className="quantity">
-        <S.PlusButton onClick={handleButtonPlusClick} icon="plus">
+      <S.VoteBox>
+        <S.PlusButton onClick={handleButtonPlusClick}>
           <S.StyledPlusIcon />
           <svg src={PlusIcon} />
         </S.PlusButton>
-        <S.VoteInput
-          type="number"
-          name="quantity"
-          id="quantity"
-          placeholder="0"
-          value={inputState}
-          onChange={handleChangeInput}
-        />
-        <S.MinusButton onClick={handleButtonMinusClick} icon="minus">
+        <S.VoteInput type={type} placeholder="0" value={upVotes} onChange={handleChangeInput} />
+        <S.MinusButton onClick={handleButtonMinusClick}>
           <S.StyledMinusIcon />
           <svg src={MinusIcon} />
         </S.MinusButton>
