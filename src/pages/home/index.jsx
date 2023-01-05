@@ -1,5 +1,5 @@
-import SendButton from '../../components/send-button/';
+import VoteBar from '../../components/vote-bar/';
 
 export default function Home() {
-  return <SendButton></SendButton>;
+  return <VoteBar />;
 }
