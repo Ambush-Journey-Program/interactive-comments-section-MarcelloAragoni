@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import VoteBar from '../../components/vote-bar/';
+import { useState } from 'react';
+import Input from '../../components/input/';
 
 export default function Home() {
-  return <VoteBar />;
-=======
-import Button from '../../components/button/';
+  const [textField, setTextField] = useState();
+  console.log(textField);
 
-export default function Home() {
-  return <Button>SEND</Button>;
->>>>>>> main
+  return <Input onChange={setTextField} />;
 }
