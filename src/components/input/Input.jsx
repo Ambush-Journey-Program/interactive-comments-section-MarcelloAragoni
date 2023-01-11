@@ -9,10 +9,10 @@ export default function Input({ onChange, value }) {
   }
 
   return (
-    <S.form onSubmit={handleChange} id="noter-save-form">
+    <S.Form onSubmit={handleChange} id="noter-save-form">
       <img src={avatar} alt="avatar image" />
-      <S.textArea id="noter-text-area" name="textarea" value={value} />
+      <S.TextArea id="noter-text-area" name="textarea" value={value} />
       <Button>Send</Button>
-    </S.form>
+    </S.Form>
   );
 }
