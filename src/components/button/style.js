@@ -13,12 +13,12 @@ const variants = {
   ghost: css`
     color: #5357b6;
     background-color: transparent;
-    text-transform: none;
+    text-transform: capitalize;
   `,
   delete: css`
     color: #ed6368;
     background-color: transparent;
-    text-transform: none;
+    text-transform: capitalize;
   `
 };
 
