@@ -28,7 +28,7 @@ export default function Comments({ isReply, isUser = 'true' }) {
           <S.User>amyrobson</S.User>
           <S.Date>1 month ago</S.Date>
           <Button icon={icon} variant={variant}>
-            {variant}
+            {icon}
           </Button>
         </S.Section>
         <S.comment>
