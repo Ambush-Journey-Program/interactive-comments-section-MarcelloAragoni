@@ -1,6 +1,6 @@
 import avatar from '../../assets/images/avatars/image-amyrobson.png';
 
-import VoteBar from '../vote-bar/';
+import VoteBar from '../vote-bar';
 import Button from '../button';
 
 import * as S from './style';
@@ -15,7 +15,7 @@ const VARIANTS = {
   delete: 'delete'
 };
 
-export default function Comments({ isReply, isUser = 'true' }) {
+export default function Comment({ isReply, isUser = 'true' }) {
   const icon = isUser ? ICONS.delete : ICONS.reply;
   const variant = isUser ? VARIANTS.delete : VARIANTS.ghost;
 
@@ -31,11 +31,11 @@ export default function Comments({ isReply, isUser = 'true' }) {
             {icon}
           </Button>
         </S.Section>
-        <S.comment>
+        <S.Comment>
           Impressive! Though it seems the drag feature could be improved. But overall it looks
           incredible. You’ve nailed the design and the responsiveness at various breakpoints works
           really well.
-        </S.comment>
+        </S.Comment>
       </S.SectionWrap>
     </S.Wrap>
   );

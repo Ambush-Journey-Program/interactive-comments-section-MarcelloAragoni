@@ -43,6 +43,6 @@ export const Date = styled.p`
   flex: 5;
 `;
 
-export const comment = styled.p`
+export const Comment = styled.p`
   margin-top: 1rem;
 `;
