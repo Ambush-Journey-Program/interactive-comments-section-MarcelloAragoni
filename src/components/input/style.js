@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
+  padding-top: 20px;
   img {
     vertical-align: top;
   }
