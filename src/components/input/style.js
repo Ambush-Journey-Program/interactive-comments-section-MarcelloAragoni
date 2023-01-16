@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const form = styled.Form`
+export const Form = styled.form`
   img {
     vertical-align: top;
   }
@@ -11,7 +11,7 @@ export const form = styled.Form`
   }
 `;
 
-export const textArea = styled.TextArea`
+export const TextArea = styled.textarea`
   margin-left: 1rem;
   height: 6rem;
   width: 31.625rem;

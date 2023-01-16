@@ -1,8 +1,18 @@
-import { useState } from 'react';
-import Input from '../../components/input/';
+import Button from '../../components/button/';
 
 export default function Home() {
-  const [textField, setTextField] = useState();
-
-  return <Input onChange={setTextField} />;
+  return (
+    <>
+      <Button variant="send">Send</Button>
+      <Button icon="reply" variant="ghost">
+        Reply
+      </Button>
+      <Button icon="delete" variant="delete">
+        Delete
+      </Button>
+      <Button icon="edit" variant="ghost">
+        Edit
+      </Button>
+    </>
+  );
 }
