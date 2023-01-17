@@ -1,14 +1,11 @@
 import styled, { css } from 'styled-components';
 
-const reply = {
-  reply: css`
-    width: 40.125rem;
-    align-self: flex-end;
-    border-left: 1px solid #afafaf;
-    padding-top: 0;
-  `
-};
-
+const replyStyle = css`
+  width: 40.125rem;
+  align-self: flex-end;
+  border-left: 1px solid #afafaf;
+  padding-top: 0;
+`;
 export const GeneralWrap = styled.div`
   width: 47.6875rem;
   display: flex;
@@ -23,7 +20,7 @@ export const Wrap = styled.div`
     padding: 24px;
   }
 
-  ${({ isReply }) => reply[isReply]}
+  ${({ isReply }) => (isReply ? replyStyle : undefined)}
 `;
 
 export const SectionWrap = styled.div`

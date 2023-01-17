@@ -7,17 +7,17 @@ import Input from '../../components/input';
 
 export default function Home() {
   const [comments, setComments] = useState([...COMMENTS]);
-  const [isReply, setIsReply] = useState('');
+  const [isReply, setIsReply] = useState(false);
   const [idReply, setIdReply] = useState('');
-  const inputComment = useRef();
+  const inputCommentRef = useRef();
 
   const handleClick = () => {
-    inputComment.current.focus();
-    setIsReply('true');
+    inputCommentRef.current.focus();
+    setIsReply(true);
   };
 
   const handleSubmit = (content, createdAt, avatar, username) => {
-    if (isReply === 'true') {
+    if (isReply) {
       handleReply(content, createdAt, avatar, username);
       return;
     }
@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Comment comments={comments} setNewId={setIdReply} onclick={handleClick} />
-      <Input focus={inputComment} newComment={handleSubmit} />
+      <Input inputRef={inputCommentRef} newComment={handleSubmit} />
     </>
   );
 }
