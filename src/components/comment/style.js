@@ -20,7 +20,7 @@ export const Wrap = styled.div`
     padding: 24px;
   }
 
-  ${({ isReply }) => (isReply ? replyStyle : undefined)}
+  ${({ isReply }) => isReply && replyStyle}
 `;
 
 export const SectionWrap = styled.div`
