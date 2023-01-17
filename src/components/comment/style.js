@@ -1,12 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrap = styled.div`
+const replyStyle = css`
+  width: 40.125rem;
+  align-self: flex-end;
+  border-left: 1px solid #afafaf;
+  padding-top: 0;
+`;
+export const GeneralWrap = styled.div`
   width: 47.6875rem;
   display: flex;
+  flex-direction: column;
+`;
+
+export const Wrap = styled.div`
+  display: flex;
+  padding: 24px 24px 24px 0;
 
   div {
     padding: 24px;
   }
+
+  ${({ isReply }) => isReply && replyStyle}
 `;
 
 export const SectionWrap = styled.div`
@@ -45,4 +59,5 @@ export const Date = styled.p`
 
 export const Comment = styled.p`
   margin-top: 1rem;
+  line-height: 24px;
 `;
